@@ -1,3 +1,26 @@
+resource "gsuite_user" "users" {
+  for_each = local.users
+
+  primary_email  = each.value.email
+  recovery_email = each.value.recovery_email
+
+  name = {
+    given_name  = each.value.name.first_name
+    family_name = each.value.name.last_name
+  }
+
+  /* aliases = each.value.gsuite.aliases */
+  aliases = try(each.value.gsuite.aliases, [])
+}
+
+resource "gsuite_group" "groups" {
+  for_each = local.gsuite_groups
+
+  email       = "${each.key}@breu.io"
+  name        = each.value.name
+  description = each.value.description
+}
+
 resource "github_repository" "repos" {
   for_each = local.repos
 
@@ -9,16 +32,21 @@ resource "github_repository" "repos" {
   has_projects  = each.value.has_projects
 }
 
-resource "gsuite_user" "users" {
-  for_each = local.users
+resource "github_team" "teams" {
+  for_each = local.github_teams
 
-  primary_email = each.value.email
-  recovery_email = each.value.recovery_email
+  name = each.key
+  description = each.value.description
+  create_default_maintainer = each.value.create_default_maintainer
+}
 
-  name = {
-    given_name = each.value.name.first_name
-    family_name = each.value.name.last_name
-  }
+resource "github_team_repository" "team_repos" {
+  count = length(local.github_team_memberships)
 
-  aliases = each.value.gsuite.aliases
+  team_id = github_team.teams[local.github_team_memberships[count.index].team].id
+  repository = local.github_team_memberships[count.index].repo
+  permission = local.github_team_memberships[count.index].permission
+  /* team_id = github_team[each.value.team].id
+  repository = each.value.repo
+  permission = each.value.permission */
 }
