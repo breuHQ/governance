@@ -1,0 +1,16 @@
+email: yousuf@breu.io
+recovery_email: yousuf.jawwad@gmail.com
+name:
+  first_name: Yousuf
+  last_name: Jawwad
+
+
+# Google Workspace
+gsuite:
+  aliases:
+    - jay@breu.io
+
+# Github
+github:
+  username: debuggerpk
+
