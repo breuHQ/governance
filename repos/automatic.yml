@@ -4,3 +4,6 @@ has_downloads: true
 has_issues: true
 has_wiki: false
 has_projects: false
+
+teams:
+  admins: admin

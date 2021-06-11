@@ -13,4 +13,5 @@ gsuite:
 # Github
 github:
   username: debuggerpk
+  teams: admins
 
