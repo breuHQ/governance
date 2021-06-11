@@ -7,3 +7,5 @@ name:
 # Github
 github:
   username: shanlashari
+  teams:
+    admins: maintainer

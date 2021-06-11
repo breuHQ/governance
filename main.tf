@@ -35,18 +35,23 @@ resource "github_repository" "repos" {
 resource "github_team" "teams" {
   for_each = local.github_teams
 
-  name = each.key
-  description = each.value.description
+  name                      = each.key
+  description               = each.value.description
   create_default_maintainer = each.value.create_default_maintainer
 }
 
 resource "github_team_repository" "team_repos" {
+  count = length(local.github_team_repos) # ysf: personally, i don't like count
+
+  team_id    = github_team.teams[local.github_team_repos[count.index].team].id
+  repository = local.github_team_repos[count.index].repo
+  permission = local.github_team_repos[count.index].permission
+}
+
+resource "github_team_membership" "team_memberships" {
   count = length(local.github_team_memberships)
 
-  team_id = github_team.teams[local.github_team_memberships[count.index].team].id
-  repository = local.github_team_memberships[count.index].repo
-  permission = local.github_team_memberships[count.index].permission
-  /* team_id = github_team[each.value.team].id
-  repository = each.value.repo
-  permission = each.value.permission */
+  team_id  = github_team.teams[local.github_team_memberships[count.index].team].id
+  username = local.github_team_memberships[count.index].username
+  role     = local.github_team_memberships[count.index].role
 }

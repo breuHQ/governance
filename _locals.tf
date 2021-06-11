@@ -19,12 +19,28 @@ locals {
     trimsuffix(basename(filename), ".yml") => yamldecode(file(filename))
   }
 
-  github_team_memberships = flatten([for repo, value in local.repos :
-    flatten([for team, permission in value.teams :
-      {repo: repo, team: team, permission: permission}])
-  ])
+  github_team_repos = flatten(
+    [
+      for repo, value in local.repos : flatten( # this flatten should be in try()
+        [
+          for team, permission in value.teams : { repo : repo, team : team, permission : permission }
+        ]
+      )
+    ]
+  )
+
+  github_team_memberships = flatten(
+    [
+      for user, value in local.users: flatten( # this flatten should be in in try()
+        [
+          for team, role in value.github.teams : { username: value.github.username, team: team, role: role }
+        ]
+      )
+    ]
+  )
 }
 
+# This is temporary to make me understand the final structure of different ELTs i am using above.
 output "users" {
   value = local.users
 }
@@ -41,9 +57,15 @@ output "github_teams" {
   value = local.github_teams
 }
 
-output "memberships" {
+output "github_team_repos" {
+  value = local.github_team_repos
+}
+
+output "github_team_memberships" {
   value = local.github_team_memberships
 }
+
+# For importing we are going to need to inspect the ids, the following can be used.
 
 /* data "github_team" "example" {
   slug = "admins"
