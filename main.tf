@@ -1,3 +1,8 @@
+/*
+ * Please see `./_locals.tf` for reading data from different repositories
+ * The following iterate over each user, repo, team and creates resources whereever needed.
+ */
+
 resource "gsuite_user" "users" {
   for_each = local.users
 
@@ -9,7 +14,6 @@ resource "gsuite_user" "users" {
     family_name = each.value.name.last_name
   }
 
-  /* aliases = each.value.gsuite.aliases */
   aliases = try(each.value.gsuite.aliases, [])
 }
 
@@ -19,6 +23,14 @@ resource "gsuite_group" "groups" {
   email       = "${each.key}@breu.io"
   name        = each.value.name
   description = each.value.description
+}
+
+resource "gsuite_group_member" "group_member" {
+  count = length(local.gsuite_group_members)
+
+  group = local.gsuite_group_members[count.index].group
+  email = local.gsuite_group_members[count.index].email
+  role  = local.gsuite_group_members[count.index].role
 }
 
 resource "github_repository" "repos" {
