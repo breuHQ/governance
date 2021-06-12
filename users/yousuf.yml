@@ -9,6 +9,9 @@ name:
 gsuite:
   aliases:
     - jay@breu.io
+  groups:
+    team: owner
+    gcp-billing-admins: owner
 
 # Github
 github:

@@ -1,4 +1,5 @@
 terraform {
+  required_version = ">= 1"
   required_providers {
     gsuite = {
       source  = "DeviaVir/gsuite"
@@ -13,7 +14,7 @@ terraform {
 }
 
 provider "gsuite" {
-  credentials = "./gsuite.json"
+  credentials             = "./gsuite.json"
   impersonated_user_email = "yousuf@breu.io"
   oauth_scopes = [
     "https://www.googleapis.com/auth/admin.directory.group",

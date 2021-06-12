@@ -4,6 +4,11 @@ name:
   first_name: Shan
   last_name: Raza
 
+gsuite:
+  groups:
+    team: owner
+    gcp-billing-admins: owner
+
 # Github
 github:
   username: shanlashari
