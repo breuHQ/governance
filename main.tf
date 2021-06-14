@@ -1,6 +1,6 @@
 /*
- * Please see `./_locals.tf` for reading data from different repositories
- * The following iterate over each user, repo, team and creates resources whereever needed.
+ * Please see `./_locals.tf` for reading data from different files
+ * The following iterate over each resource type (user, repo, group, team)
  */
 
 resource "gsuite_user" "users" {
