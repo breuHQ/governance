@@ -26,11 +26,11 @@ resource "gsuite_group" "groups" {
 }
 
 resource "gsuite_group_member" "group_member" {
-  count = length(local.gsuite_group_members)
+  for_each = local.gsuite_group_members
 
-  group = local.gsuite_group_members[count.index].group
-  email = local.gsuite_group_members[count.index].email
-  role  = local.gsuite_group_members[count.index].role
+  group = "${each.value.group}@breu.io"
+  email = each.value.email
+  role  = each.value.role
 }
 
 resource "github_repository" "repos" {
@@ -53,17 +53,17 @@ resource "github_team" "teams" {
 }
 
 resource "github_team_repository" "team_repos" {
-  count = length(local.github_team_repos) # ysf: personally, i don't like count
+  for_each = local.github_team_repos
 
-  team_id    = github_team.teams[local.github_team_repos[count.index].team].id
-  repository = local.github_team_repos[count.index].repo
-  permission = local.github_team_repos[count.index].permission
+  team_id    = github_team.teams[each.value.team].id
+  repository = each.value.repo
+  permission = each.value.permission
 }
 
 resource "github_team_membership" "team_memberships" {
-  count = length(local.github_team_memberships)
+  for_each = local.github_team_memberships
 
-  team_id  = github_team.teams[local.github_team_memberships[count.index].team].id
-  username = local.github_team_memberships[count.index].username
-  role     = local.github_team_memberships[count.index].role
+  team_id  = github_team.teams[each.value.team].id
+  username = each.value.username
+  role     = each.value.role
 }
