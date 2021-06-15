@@ -12,11 +12,13 @@ locals {
   }
 
   # gsuite group memberships
-  gsuite_group_members = flatten([
-    for user, details in local.users : try(flatten([
-      for group, role in details.gsuite.groups : { email : details.email, group : "${group}@breu.io", role : upper(role) }
-    ]), [])
-  ])
+  gsuite_group_members = {
+    for obj in flatten([
+      for user, details in local.users : try(flatten([
+        for group, role in details.gsuite.groups : { user : user, email : details.email, group : group, role : upper(role) }
+      ]), [])
+    ]) : "${obj.group}_${obj.user}" => obj
+  }
 
   # repositories on github
   repos = {
@@ -31,18 +33,22 @@ locals {
   }
 
   # team associations with repos on github
-  github_team_repos = flatten([
-    for repo, details in local.repos : try(flatten([
-      for team, permission in details.teams : { repo : repo, team : team, permission : permission }
-    ]), [])
-  ])
+  github_team_repos = {
+    for obj in flatten([
+      for repo, details in local.repos : try(flatten([
+        for team, permission in details.teams : { repo : repo, team : team, permission : permission }
+      ]), [])
+    ]) : "${obj.repo}_${obj.team}" => obj
+  }
 
   # team assoications with github users
-  github_team_memberships = flatten([
-    for user, details in local.users : flatten([
-      for team, role in details.github.teams : { username : details.github.username, team : team, role : role }
-    ])
-  ])
+  github_team_memberships = {
+    for obj in flatten([
+      for user, details in local.users : flatten([
+        for team, role in details.github.teams : { username : details.github.username, team : team, role : role }
+      ])
+    ]) : "${obj.team}_${obj.username}" => obj
+  }
 }
 
 # This is temporary to make me understand the final structure of different ELTs i am using above.

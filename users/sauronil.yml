@@ -1,0 +1,16 @@
+email: sauronil@breu.io
+recovery_email: sauronildas@protonmail.com
+name:
+  first_name: Sauronil
+  last_name: Das
+
+gsuite:
+  groups:
+    team: member
+    # gcp-billing-admins: owner
+
+# Github
+github:
+  username: InFiNix1
+  teams:
+    admins: maintainer
