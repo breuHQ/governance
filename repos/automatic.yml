@@ -7,3 +7,4 @@ has_projects: false
 
 teams:
   admins: admin
+  devs: maintain
