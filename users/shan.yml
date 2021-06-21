@@ -9,7 +9,6 @@ gsuite:
     team: owner
     gcp-billing-admins: owner
 
-# Github
 github:
   username: shanlashari
   teams:

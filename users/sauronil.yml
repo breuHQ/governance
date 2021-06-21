@@ -9,8 +9,7 @@ gsuite:
     team: member
     # gcp-billing-admins: owner
 
-# Github
 github:
-  username: InFiNix1
+  username: sauronil-das
   teams:
     admins: maintainer
