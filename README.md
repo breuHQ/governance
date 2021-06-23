@@ -10,11 +10,11 @@ Documentation can be found here - > https://registry.terraform.io/providers/inte
 1. Create a <username>.yml inside users directory
 
 2. run commands -> 
-  
+
 terraform plan -out <name>.txt 
   
 check for line -> Plan: # to add, # to change, # to destroy.
-
+  
 terraform apply "<name>.txt"
 
 #To Destroy the User Created
