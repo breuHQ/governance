@@ -24,10 +24,15 @@ terraform apply "<name>.txt"
 2. run commands ->
   
 terraform refresh
+
 terraform init
+
 terraform fmt
+
 terraform validate
+
 terraform plan -out <name>.txt
+  
 terraform apply "<name>.txt"
 
 check for line Plan: # to add, # to change, # to destroy.
