@@ -26,4 +26,5 @@ provider "gsuite" {
 
 provider "github" {
   owner = "breuHQ"
+  token = "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"
 }
