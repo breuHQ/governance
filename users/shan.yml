@@ -6,11 +6,15 @@ name:
 
 gsuite:
   groups:
-    team: owner
-    gcp-billing-admins: owner
+    - name: team
+      role: owner
+
+    - name: gcp-billing-admins
+      role: owner
 
 # Github
 github:
   username: shanlashari
   teams:
-    admins: maintainer
+    - name: admins
+      role: maintainer

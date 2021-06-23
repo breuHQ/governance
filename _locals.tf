@@ -15,7 +15,7 @@ locals {
   gsuite_group_members = {
     for obj in flatten([
       for user, details in local.users : try(flatten([
-        for group, role in details.gsuite.groups : { user : user, email : details.email, group : group, role : upper(role) }
+        for group in details.gsuite.groups : { user : user, email : details.email, group : group.name, role : upper(group.role) }
       ]), [])
     ]) : "${obj.group}_${obj.user}" => obj
   }
@@ -45,7 +45,7 @@ locals {
   github_team_memberships = {
     for obj in flatten([
       for user, details in local.users : flatten([
-        for team, role in details.github.teams : { username : details.github.username, team : team, role : role }
+        for team in details.github.teams : { username : details.github.username, team : team.name, role : team.role }
       ])
     ]) : "${obj.team}_${obj.username}" => obj
   }
