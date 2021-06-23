@@ -10,11 +10,16 @@ gsuite:
   aliases:
     - jay@breu.io
   groups:
-    team: owner
-    gcp-billing-admins: owner
+    - name: team
+      role: owner
+
+    - name: gcp-billing-admins
+      role: owner
 
 # Github
 github:
   username: debuggerpk
   teams:
-    admins: maintainer
+    # admins: maintainer
+    - name: admins
+      role: maintainer

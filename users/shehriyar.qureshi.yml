@@ -9,11 +9,14 @@ gsuite:
   aliases:
     - m.shehriyar@pk.breu.io
   groups:
-    team: member
+    - name: team
+      role: member
+    # team: member
     # gcp-billing-admins: owner
 
 # Github
 github:
   username: thatdevsherry
   teams:
-    devs: member
+    - name: devs
+      role: member

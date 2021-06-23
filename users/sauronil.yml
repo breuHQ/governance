@@ -6,11 +6,12 @@ name:
 
 gsuite:
   groups:
-    team: member
-    # gcp-billing-admins: owner
+    - name: team
+      role: member
 
 # Github
 github:
   username: sauronil-das
   teams:
-    admins: maintainer
+    - name: admins
+      role: maintainer
