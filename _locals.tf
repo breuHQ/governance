@@ -51,6 +51,7 @@ locals {
   }
 }
 
+
 # This is temporary to make me understand the final structure of different ELTs i am using above.
 output "users" {
   value = local.users
@@ -83,9 +84,9 @@ output "github_team_memberships" {
 # For importing we are going to need to inspect the ids, the following can be used.
 
 /* data "github_team" "example" {
-  slug = "admins"
+slug = "admins"
 }
 
 output "github_admin" {
-  value = data.github_team.example.id
+value = data.github_team.example.id
 } */
