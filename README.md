@@ -11,25 +11,25 @@ Documentation can be found here - > https://registry.terraform.io/providers/inte
 
 2. run commands -> 
   
-  terraform plan -out <name>.txt 
+terraform plan -out <name>.txt 
   
-  check for line -> Plan: # to add, # to change, # to destroy.
+check for line -> Plan: # to add, # to change, # to destroy.
 
-  terraform apply "<name>.txt"
+terraform apply "<name>.txt"
 
 #To Destroy the User Created
 
 1. Delete the <name>.yml file from user directory
 
 2. run commands ->
+  
+terraform refresh
+terraform init
+terraform fmt
+terraform validate
+terraform plan -out <name>.txt
+terraform apply "<name>.txt"
 
-  terraform refresh
-  terraform init
-  terraform fmt
-  terraform validate
-  terraform plan -out <name>.txt
-  terraform apply "<name>.txt"
-
-  check for line Plan: # to add, # to change, # to destroy.
+check for line Plan: # to add, # to change, # to destroy.
 
 
