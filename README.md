@@ -11,11 +11,11 @@ Documentation can be found here - > https://registry.terraform.io/providers/inte
 
 2. run commands -> 
 
-terraform plan -out <name>.txt 
+terraform plan -out <plan_name> 
   
 check for line -> Plan: # to add, # to change, # to destroy.
   
-terraform apply "<name>.txt"
+terraform apply "<plan_name>"
 
 #To Destroy the User Created
 
@@ -31,10 +31,8 @@ terraform fmt
 
 terraform validate
 
-terraform plan -out <name>.txt
+terraform plan -out <plan_name>
   
-terraform apply "<name>.txt"
+terraform apply "<plan_name>"
 
 check for line Plan: # to add, # to change, # to destroy.
-
-
