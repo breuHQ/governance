@@ -44,9 +44,9 @@ locals {
   # team assoications with github users
   github_team_memberships = {
     for obj in flatten([
-      for user, details in local.users : flatten([
+      for user, details in local.users : try(flatten([
         for team in details.github.teams : { username : details.github.username, team : team.name, role : team.role }
-      ])
+      ]), [])
     ]) : "${obj.team}_${obj.username}" => obj
   }
 }
