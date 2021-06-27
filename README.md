@@ -1,7 +1,13 @@
 # governance
 Breu's IAM governance as code
 
-New Mainterner must provide their personal PAT into _config.tf
+New Mainterner must provide their Personal Access Token for GitHub
+
+This can be done in the follwing way -->
+
+1. Set env variable by setting the token to .bashrc/.bash_profile
+
+example - export GITHUB_TOKEN="${token_string}"
 
 Documentation can be found here - > https://registry.terraform.io/providers/integrations/github/latest/docs#oauth--personal-access-token
 
