@@ -1,0 +1,20 @@
+email: noor.amir@breu.io
+recovery_email: noor.binte.amir@gmail.com
+name:
+  first_name: Noor
+  last_name: Bint-e-Amir
+
+
+# Google Workspace
+gsuite:
+  groups:
+    - name: team
+      role: member
+
+
+# Github
+github:
+  username: noor-amir
+  teams:
+    - name: devs
+      role: member
