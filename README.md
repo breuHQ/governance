@@ -10,8 +10,9 @@ This can be done in the follwing way ->
 
   - example - 'export GITHUB_TOKEN="${token_string}"'
 
-Documentation can be found here
-[PAT](https://registry.terraform.io/providers/integrations/github/latest/docs#oauth--personal-access-token)
+Documentation can be found here - > 
+
+[OAuth / Personal Access Token](https://registry.terraform.io/providers/integrations/github/latest/docs#oauth--personal-access-token)
 
 # To Create a New User
 
