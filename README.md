@@ -1,44 +1,47 @@
 # governance
+
 Breu's IAM governance as code
 
-New Mainterner must provide their Personal Access Token for GitHub
+New Mainterner must provide their **Personal Access Token** for GitHub in their own Local Environment
 
-This can be done in the follwing way -->
+This can be done in the follwing way ->
 
-1. Set env variable by setting the token to .bashrc/.bash_profile
+  - Set env variable by setting the token to .bashrc/.bash_profile
 
-example - export GITHUB_TOKEN="${token_string}"
+  - example - `export GITHUB_TOKEN="${token_string}"`
 
-Documentation can be found here - > https://registry.terraform.io/providers/integrations/github/latest/docs#oauth--personal-access-token
+Documentation can be found here - > 
 
-#To Create a New User
+[OAuth / Personal Access Token](https://registry.terraform.io/providers/integrations/github/latest/docs#oauth--personal-access-token)
 
-1. Create a <username>.yml inside users directory
+# To Create a New User
 
-2. run commands -> 
+Create a <username>.yml inside users directory
 
-terraform plan -out <plan_name> 
+run commands -> 
+
+  - `terraform plan -out <plan_name>`
   
-check for line -> Plan: # to add, # to change, # to destroy.
+**check for line -> Plan: # to add, # to change, # to destroy**
   
-terraform apply "<plan_name>"
+  - `terraform apply "<plan_name>"`
 
-#To Destroy the User Created
+# To Destroy the User Created
 
 1. Delete the <name>.yml file from user directory
 
 2. run commands ->
   
-terraform refresh
+  - `terraform refresh`
 
-terraform init
+  - `terraform init`
 
-terraform fmt
+  - `terraform fmt`
 
-terraform validate
+  - `terraform validate`
 
-terraform plan -out <plan_name>
+  - `terraform plan -out <plan_name>`
   
-terraform apply "<plan_name>"
+  - `terraform apply "<plan_name>"`
 
-check for line Plan: # to add, # to change, # to destroy.
+**check for line Plan: # to add, # to change, # to destroy**
