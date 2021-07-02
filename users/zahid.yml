@@ -1,0 +1,12 @@
+email: zahid@breu.io
+recovery_email: 
+name:
+  first_name: Zahid
+  last_name: Ummar
+
+
+# Google Workspace
+gsuite:
+  groups:
+    - name: team
+      role: member

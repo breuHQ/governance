@@ -1,0 +1,12 @@
+email: imran.badami@breu.io
+recovery_email: 
+name:
+  first_name: Imran
+  last_name: Badami
+
+
+# Google Workspace
+gsuite:
+  groups:
+    - name: team
+      role: member
