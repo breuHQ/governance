@@ -1,0 +1,12 @@
+email: riaz.rehman@breu.io
+recovery_email:  
+name:
+  first_name: Riaz
+  last_name: Rehman
+
+
+# Google Workspace
+gsuite:
+  groups:
+    - name: team
+      role: member

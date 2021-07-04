@@ -1,0 +1,12 @@
+email: nasim@breu.io
+recovery_email: 
+name:
+  first_name: Nabeel
+  last_name: Asim
+
+
+# Google Workspace
+gsuite:
+  groups:
+    - name: team
+      role: member

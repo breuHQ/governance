@@ -1,0 +1,12 @@
+email: omer@breu.io
+recovery_email: 
+name:
+  first_name: Omer
+  last_name: Majeed
+
+
+# Google Workspace
+gsuite:
+  groups:
+    - name: team
+      role: member
