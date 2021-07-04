@@ -7,7 +7,7 @@ name:
 gsuite:
   groups:
     - name: team
-      role: member
+      role: owner
 
 # Github
 github:

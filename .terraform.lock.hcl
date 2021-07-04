@@ -6,6 +6,7 @@ provider "registry.terraform.io/deviavir/gsuite" {
   constraints = "0.1.62"
   hashes = [
     "h1:boSZoa9t4hUBeHOocdAEYorz6kNTmWNzK+f4hu3YmL4=",
+    "h1:uX8pw33uAU3hpBBdFlbBOr+RhzqT/Fqug3f/Wl5ReNg=",
     "zh:1d5c8a3fdddcde5633ee8c35bfc07b4b5abf42f38fa8f89beef624ad6f3d30d1",
     "zh:296378c00e47242d8d10e6fdffae00a251cb8bd7ef65aa9c51b79805d7a143d0",
     "zh:2d040c0a4fa505b943f450b41005a9abe5f0dcc3b77cc1469dfb729a30d01d12",
@@ -24,9 +25,10 @@ provider "registry.terraform.io/deviavir/gsuite" {
 
 provider "registry.terraform.io/integrations/github" {
   version     = "4.11.0"
-  constraints = "~> 4.0"
+  constraints = "~> 4.1"
   hashes = [
     "h1:IK9B/qgGdi5/f0d6GS66kIuolp4nUtsCi031vxJkBmA=",
+    "h1:zkrX4hHDQ3PaaOI3PyNbD5M3B5LBVS6RFjy7rNUp56U=",
     "zh:0d09123835c77cd269b78dd919c9a5f551039ec9d3ee6b0426eb5626a9f37409",
     "zh:19524494b7b1e0b2e5bf4defdf3ed5d87ca4349c3d4f3764e6daaf005ec187d7",
     "zh:1ac67b0ecb4e9ece3cfe62ebc34dc57f7a0d0af1c522f94691b5d3ddedb7555e",
