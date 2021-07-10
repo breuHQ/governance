@@ -1,5 +1,5 @@
 email: omer@breu.io
-recovery_email: 
+recovery_email: omer.majeed734@gmail.com
 name:
   first_name: Omer
   last_name: Majeed
@@ -9,4 +9,10 @@ name:
 gsuite:
   groups:
     - name: team
+      role: member
+# Github
+github:
+  username: OmerBreu
+  teams:
+    - name: devs
       role: member
