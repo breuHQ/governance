@@ -15,3 +15,9 @@ github:
   teams:
     - name: admins
       role: maintainer
+
+    - name: tracechimp
+      role: maintainer
+
+    - name: slogr
+      role: maintainer

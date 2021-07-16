@@ -14,5 +14,5 @@ gsuite:
 github:
   username: ahsanfaruqui
   teams:
-    - name: devs
+    - name: slogr
       role: member

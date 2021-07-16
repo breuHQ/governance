@@ -14,5 +14,8 @@ gsuite:
 github:
   username: awaiskhalidawan
   teams:
-    - name: devs
+    - name: slogr
+      role: member
+
+    - name: tracechimp
       role: member
