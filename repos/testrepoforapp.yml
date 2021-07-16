@@ -1,0 +1,15 @@
+name: testrepoforapp
+description: Lets see if we can create a github app
+has_downloads: true
+has_issues: true
+has_wiki: false
+has_projects: false
+topics:
+  - tracechimp
+
+teams:
+  - name: admins
+    permission: admin
+
+  - name: tracechimp
+    permission: maintain
