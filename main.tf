@@ -42,6 +42,7 @@ resource "github_repository" "repos" {
   has_issues    = each.value.has_issues
   has_wiki      = each.value.has_wiki
   has_projects  = each.value.has_projects
+  topics        = each.value.topics
 }
 
 resource "github_team" "teams" {

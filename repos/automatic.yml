@@ -4,7 +4,12 @@ has_downloads: true
 has_issues: true
 has_wiki: false
 has_projects: false
+topics:
+  - integry
 
 teams:
-  admins: admin
-  devs: maintain
+  - name: admins
+    permission: admin
+
+  - name: devs
+    permission: maintain

@@ -4,6 +4,9 @@ has_downloads: false
 has_issues: false
 has_wiki: false
 has_projects: false
+topics:
+  - internal
 
 teams:
-  admins: admin
+  - name: admins
+    permission: admin
