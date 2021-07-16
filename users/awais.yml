@@ -10,3 +10,9 @@ gsuite:
   groups:
     - name: team
       role: member
+
+github:
+  username: awaiskhalidawan
+  teams:
+    - name: devs
+      role: member

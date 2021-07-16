@@ -36,7 +36,7 @@ locals {
   github_team_repos = {
     for obj in flatten([
       for repo, details in local.repos : try(flatten([
-        for team, permission in details.teams : { repo : repo, team : team, permission : permission }
+        for team in details.teams : { repo : repo, team : team.name, permission : team.permission }
       ]), [])
     ]) : "${obj.repo}_${obj.team}" => obj
   }
@@ -52,40 +52,40 @@ locals {
 }
 
 # This is temporary to make me understand the final structure of different ELTs i am using above.
-output "users" {
-  value = local.users
-}
+# output "users" {
+#   value = local.users
+# }
 
-output "repos" {
-  value = local.repos
-}
+# output "repos" {
+#   value = local.repos
+# }
 
-output "gsuite_groups" {
-  value = local.gsuite_groups
-}
+# output "gsuite_groups" {
+#   value = local.gsuite_groups
+# }
 
-output "gsuite_group_members" {
-  value = local.gsuite_group_members
-}
+# output "gsuite_group_members" {
+#   value = local.gsuite_group_members
+# }
 
-output "github_teams" {
-  value = local.github_teams
-}
+# output "github_teams" {
+#   value = local.github_teams
+# }
 
-output "github_team_repos" {
-  value = local.github_team_repos
-}
+# output "github_team_repos" {
+#   value = local.github_team_repos
+# }
 
-output "github_team_memberships" {
-  value = local.github_team_memberships
-}
+# output "github_team_memberships" {
+#   value = local.github_team_memberships
+# }
 
 # For importing we are going to need to inspect the ids, the following can be used.
 
-/* data "github_team" "example" {
-  slug = "admins"
+data "github_team" "example" {
+  slug = "integry"
 }
 
 output "github_admin" {
   value = data.github_team.example.id
-} */
+}
