@@ -5,6 +5,8 @@ name:
   first_name: Shehriyar
   last_name: Qureshi
 
+gsuite_user: true
+
 gsuite:
   aliases:
     - m.shehriyar@pk.breu.io

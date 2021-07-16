@@ -1,0 +1,12 @@
+name:
+  first_name: Ahmed
+  last_name: Burney
+
+gsuite_user: false
+
+github:
+  username: SMAB95
+  teams:
+
+    - name: integry
+      role: member

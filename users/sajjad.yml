@@ -4,6 +4,8 @@ name:
   first_name: Sajjad
   last_name: Hussain
 
+gsuite_user: true
+
 
 # Google Workspace
 gsuite:

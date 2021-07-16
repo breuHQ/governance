@@ -4,6 +4,8 @@ name:
   first_name: Noor
   last_name: Bint-e-Amir
 
+gsuite_user: true
+
 
 # Google Workspace
 gsuite:

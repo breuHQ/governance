@@ -4,7 +4,7 @@
  */
 
 resource "gsuite_user" "users" {
-  for_each = local.users
+  for_each = local.gsuite_users
 
   primary_email  = each.value.email
   recovery_email = each.value.recovery_email
