@@ -82,10 +82,10 @@ locals {
 
 # For importing we are going to need to inspect the ids, the following can be used.
 
-data "github_team" "example" {
-  slug = "integry"
-}
+# data "github_team" "example" {
+#   slug = "slogr"
+# }
 
-output "github_admin" {
-  value = data.github_team.example.id
-}
+# output "github_admin" {
+#   value = data.github_team.example.id
+# }
