@@ -1,0 +1,15 @@
+name: tracechimp-dev
+description: All the experiments before we write production code
+has_downloads: true
+has_issues: true
+has_wiki: false
+has_projects: false
+topics:
+  - tracechimp
+
+teams:
+  - name: admins
+    permission: admin
+
+  - name: tracechimp
+    permission: maintain
