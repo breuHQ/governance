@@ -5,6 +5,10 @@ locals {
     trimsuffix(basename(filename), ".yml") => yamldecode(file(filename))
   }
 
+  gsuite_users = {
+    for user, details in local.users : user => details if try(details.gsuite_user)
+  }
+
   # groups on google workspace
   gsuite_groups = {
     for filename in fileset(path.module, "groups/gsuite/*.yml") :

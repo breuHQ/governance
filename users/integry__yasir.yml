@@ -1,0 +1,12 @@
+name:
+  first_name: Yasir
+  last_name: Farooqi
+
+gsuite_user: false
+
+github:
+  username: yasir-integry
+  teams:
+
+    - name: integry
+      role: member
