@@ -1,0 +1,15 @@
+name: integry-infra
+description: IaC for integry.io
+has_downloads: true
+has_issues: true
+has_wiki: false
+has_projects: false
+topics:
+  - integry
+
+teams:
+  - name: admins
+    permission: admin
+
+  - name: integry
+    permission: maintain
