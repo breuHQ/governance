@@ -18,5 +18,8 @@ gsuite:
 github:
   username: thatdevsherry
   teams:
-    - name: devs
+    - name: slogr
+      role: member
+
+    - name: integry
       role: member

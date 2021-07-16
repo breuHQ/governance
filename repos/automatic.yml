@@ -11,5 +11,5 @@ teams:
   - name: admins
     permission: admin
 
-  - name: devs
+  - name: integry
     permission: maintain
