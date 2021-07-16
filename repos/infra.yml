@@ -1,16 +1,14 @@
-name: integry-infra
-description: IaC for integry.io
+name: infra
+description: IaC for Breu. Setsup Breu as a startup incubator.
 has_downloads: true
 has_issues: true
 has_wiki: false
 has_projects: false
 topics:
-  - integry
   - infra
+  - internal
+  - breu
 
 teams:
   - name: admins
     permission: admin
-
-  - name: integry
-    permission: maintain

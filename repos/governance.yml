@@ -6,6 +6,7 @@ has_wiki: false
 has_projects: false
 topics:
   - internal
+  - breu
 
 teams:
   - name: admins
