@@ -1,11 +1,11 @@
-![Diagram](https://drive.google.com/file/d/1frueuYZGRaA1dgB2OI5QHt4HBuecjWsN/view?usp=sharing)
+![Diagram](/governance/docs/image.png)
 
-##Overview Of The Key Components
+## Overview Of The Key Components
 
-###Project Build Squad 
+### Project Build Squad 
 These are the Developers, Teams, Admins and Maintainers which can overlap
 
-###User File
+### User File
 
 Sample File Example - 
 
