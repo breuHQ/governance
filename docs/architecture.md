@@ -1,4 +1,5 @@
-![Diagram](/image.png)
+![Diagram](https://user-images.githubusercontent.com/42113685/130909934-a1905156-b373-4b43-802f-10f3ad873e3c.png)
+
 
 ## Overview Of The Key Components
 
