@@ -1,4 +1,4 @@
-![Diagram](/governance/docs/image.png)
+![Diagram](/image.png)
 
 ## Overview Of The Key Components
 
