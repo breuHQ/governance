@@ -33,3 +33,23 @@ github:
  role: member
 
 ```
+
+### GIT
+
+The New User File is stored, maintained and reviewed in Git after running 
+
+``` 
+terraform plan -out <plan_name>
+
+```
+
+### Terraform Apply 
+
+``` 
+Terraform apply <plan_name>
+```
+
+
+
+
+

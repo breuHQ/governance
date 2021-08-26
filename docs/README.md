@@ -2,7 +2,21 @@
 
 Breu's IAM governance as code
 
-New Mainterner must provide their **Personal Access Token** for GitHub in their own Local Environment
+
+# Terraform Setup
+
+Create service account credentials for running terraform locally. Then
+
+```
+export GOOGLE_CREDENTIALS=<PATH TO SERVICE ACCOUNT JSON CREDS>
+gcloud auth activate-service-account --key-file $GOOGLE_CREDENTIALS
+terraform init
+
+```
+
+# GitHub Setup
+
+**Personal Access Token** for GitHub in their own Local Environment
 
 This can be done in the follwing way ->
 
@@ -25,23 +39,3 @@ run commands ->
 **check for line -> Plan: # to add, # to change, # to destroy**
   
   - `terraform apply "<plan_name>"`
-
-# To Destroy the User Created
-
-1. Delete the <name>.yml file from user directory
-
-2. run commands ->
-  
-  - `terraform refresh`
-
-  - `terraform init`
-
-  - `terraform fmt`
-
-  - `terraform validate`
-
-  - `terraform plan -out <plan_name>`
-  
-  - `terraform apply "<plan_name>"`
-
-**check for line Plan: # to add, # to change, # to destroy**
