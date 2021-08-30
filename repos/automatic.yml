@@ -1,5 +1,8 @@
 name: automatic
+allow_squash_merge: false
+allow_rebase_merge: false
 description: We are going to automate the world - Nash
+delete_branch_on_merge: true
 has_downloads: true
 has_issues: true
 has_wiki: false
