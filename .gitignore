@@ -102,6 +102,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Plan Files
+emad_plan
+
 # Project Sepcific
 .env
 gsuite.json # gsuite
