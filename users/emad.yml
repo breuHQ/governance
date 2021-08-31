@@ -1,0 +1,20 @@
+email: emad@breu.io
+recovery_email: syedemaad8@gmail.com
+name:
+  first_name: Syed Emaad
+  last_name: Rizwan
+
+gsuite_user: true
+
+
+# Google Workspace
+gsuite:
+  groups:
+    - name: team
+      role: member
+# Github
+github:
+  username: syedmaad
+  teams:
+    - name: slogr
+      role: member
