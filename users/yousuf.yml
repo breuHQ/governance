@@ -18,6 +18,28 @@ gsuite:
     - name: gcp-billing-admins
       role: owner
 
+    - name: Crofty
+      role: owner
+
+    - name: Finance
+      role: owner
+
+    - name: gcp-organization-admins
+      role: owner
+
+    - name: gcp-security-admins
+      role: owner
+
+    - name: Jobs
+      role: owner
+
+    - name: Legal
+      role: owner
+
+    - name: Sales
+      role: owner
+
+
 # Github
 github:
   username: debuggerpk
