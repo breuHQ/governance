@@ -1,0 +1,27 @@
+email: shehriyar.qureshi@breu.io
+recovery_email: thatdevsherry@gmail.com
+recovery_phone: +923096194332
+name:
+  first_name: Shehriyar
+  last_name: Qureshi
+
+gsuite_user: true
+
+gsuite:
+  aliases:
+    - m.shehriyar@pk.breu.io
+  groups:
+    - name: team
+      role: member
+    # team: member
+    # gcp-billing-admins: owner
+
+# Github
+github:
+  username: thatdevsherry
+  teams:
+    - name: slogr
+      role: member
+
+    - name: integry
+      role: member
