@@ -1,0 +1,28 @@
+email: shan@breu.io
+recovery_email: shanbaloch7@gmail.com
+name:
+  first_name: Shan
+  last_name: Raza
+
+gsuite_user: true
+
+gsuite:
+  groups:
+    - name: team
+      role: owner
+
+    - name: gcp-billing-admins
+      role: owner
+
+# Github
+github:
+  username: shanlashari
+  teams:
+    - name: admins
+      role: maintainer
+
+    - name: slogr
+      role: maintainer
+
+    - name: tracechimp
+      role: maintainer
