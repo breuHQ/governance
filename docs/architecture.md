@@ -10,7 +10,7 @@ These are the Developers, Teams, Admins and Maintainers which can overlap
 
 Sample File Example -
 
-```JSON
+```yaml
 
 email: john_doe@company.com
 recovery_email: john.doe@email.com

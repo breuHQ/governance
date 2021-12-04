@@ -1,25 +1,15 @@
 email: nasim@breu.io
-recovery_email: 
+recovery_email:
 name:
   first_name: Nabeel
   last_name: Asim
 
 gsuite_user: true
 
-
 # Google Workspace
 gsuite:
   groups:
     - name: team
-      role: member
-
-    - name: Finance
-      role: manager
-
-    - name: gcp-billing-admins
-      role: owner
-
-    - name: gcp-organization-admins
       role: member
 
     - name: Legal

@@ -6,11 +6,11 @@ name:
 
 gsuite_user: true
 
-
 # Google Workspace
 gsuite:
   aliases:
     - jay@breu.io
+
   groups:
     - name: team
       role: owner
@@ -18,7 +18,7 @@ gsuite:
     - name: gcp-billing-admins
       role: owner
 
-    - name: Crofty
+    - name: x_hd
       role: owner
 
     - name: Finance
@@ -38,7 +38,6 @@ gsuite:
 
     - name: Sales
       role: owner
-
 
 # Github
 github:

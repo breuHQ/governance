@@ -2,7 +2,6 @@
 
 Breu's IAM governance as code
 
-
 # Terraform Setup
 
 Create service account credentials for running terraform locally. Then
@@ -20,8 +19,8 @@ terraform init
 
 This can be done in the follwing way ->
 
-  - Set env variable by setting the token to .bashrc/.bash_profile
-  - example - `export GITHUB_TOKEN="${token_string}"`
+- Set env variable by setting the token to .bashrc/.bash_profile
+- example - `export GITHUB_TOKEN="${token_string}"`
 
 Documentation can be found here - >
 
@@ -31,10 +30,10 @@ Documentation can be found here - >
 
 Create a <username>.yml inside users directory
 
-run commands -> 
+run commands ->
 
-  - `terraform plan -out <plan_name>`
-  
+- `terraform plan -out <plan_name>`
+
 **check for line -> Plan: # to add, # to change, # to destroy**
-  
-  - `terraform apply "<plan_name>"`
+
+- `terraform apply "<plan_name>"`
