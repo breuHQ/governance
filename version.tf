@@ -1,5 +1,10 @@
 terraform {
   required_version = ">= 1"
+
+  backend "gcs" {
+    bucket = "breu-tfstate"
+    prefix = "governance"
+  }
   required_providers {
     github = {
       source  = "integrations/github"
