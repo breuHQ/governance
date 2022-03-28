@@ -3,13 +3,14 @@
  * The following iterate over each resource type (user, repo, group, team)
  */
 
-resource "gsuite_user" "users" {
+resource "googleworkspace_user" "users" {
   for_each = local.gsuite_users
 
   primary_email  = each.value.email
   recovery_email = each.value.recovery_email
+  recovery_phone = each.value.recovery_phone
 
-  name = {
+  name {
     given_name  = each.value.name.first_name
     family_name = each.value.name.last_name
   }
@@ -17,7 +18,7 @@ resource "gsuite_user" "users" {
   aliases = try(each.value.gsuite.aliases, [])
 }
 
-resource "gsuite_group" "groups" {
+resource "googleworkspace_group" "groups" {
   for_each = local.gsuite_groups
 
   email       = "${each.key}@breu.io"
@@ -25,12 +26,13 @@ resource "gsuite_group" "groups" {
   description = each.value.description
 }
 
-resource "gsuite_group_member" "group_member" {
+resource "googleworkspace_group_member" "group_member" {
   for_each = local.gsuite_group_members
 
-  group = "${each.value.group}@breu.io"
-  email = each.value.email
-  role  = each.value.role
+  # group = "${each.value.group}@breu.io"
+  group_id = googleworkspace_group.groups[each.value.group].id
+  email    = each.value.email
+  role     = each.value.role
 }
 
 resource "github_repository" "repos" {
@@ -43,6 +45,10 @@ resource "github_repository" "repos" {
   has_wiki      = each.value.has_wiki
   has_projects  = each.value.has_projects
   topics        = each.value.topics
+
+  lifecycle {
+    ignore_changes = [branches]
+  }
 }
 
 resource "github_team" "teams" {

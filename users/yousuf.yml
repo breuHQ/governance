@@ -1,5 +1,6 @@
-email: yousuf@breu.io
+email: ysf@breu.io
 recovery_email: yousuf.jawwad@gmail.com
+recovery_phone: "+14157929858"
 name:
   first_name: Yousuf
   last_name: Jawwad
@@ -10,6 +11,7 @@ gsuite_user: true
 gsuite:
   aliases:
     - jay@breu.io
+    - yousuf@breu.io
 
   groups:
     - name: team
@@ -21,7 +23,7 @@ gsuite:
     - name: x_hd
       role: owner
 
-    - name: Finance
+    - name: fin
       role: owner
 
     - name: gcp-organization-admins
@@ -30,13 +32,13 @@ gsuite:
     - name: gcp-security-admins
       role: owner
 
-    - name: Jobs
+    - name: jobs
       role: owner
 
-    - name: Legal
+    - name: legal
       role: owner
 
-    - name: Sales
+    - name: sales
       role: owner
 
 # Github
