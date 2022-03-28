@@ -5,10 +5,10 @@ name:
   first_name: Yousuf
   last_name: Jawwad
 
-gsuite_user: true
+googleworkspace_user: true
 
 # Google Workspace
-gsuite:
+googleworkspace:
   aliases:
     - jay@breu.io
     - yousuf@breu.io

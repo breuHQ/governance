@@ -18,10 +18,10 @@ name:
   first_name: John
   last_name: Doe
 
-gsuite_user: true
+googleworkspace_user: true
 
 # Google Workspace
-gsuite:
+googleworkspace:
   groups:
     - name: team
       role: member

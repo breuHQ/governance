@@ -1,38 +1,34 @@
-/*
- * Please see `./_locals.tf` for reading data from different files
- * The following iterate over each resource type (user, repo, group, team)
- */
 
-resource "googleworkspace_user" "users" {
-  for_each = local.gsuite_users
-
-  primary_email  = each.value.email
-  recovery_email = each.value.recovery_email
-  recovery_phone = each.value.recovery_phone
-
-  name {
-    given_name  = each.value.name.first_name
-    family_name = each.value.name.last_name
+locals {
+  # repositories on github
+  repos = {
+    for filename in fileset(path.module, "repos/*.yml") :
+    trimsuffix(basename(filename), ".yml") => yamldecode(file(filename))
   }
 
-  aliases = try(each.value.gsuite.aliases, [])
-}
+  # teams on github
+  github_teams = {
+    for filename in fileset(path.module, "groups/github/*.yml") :
+    trimsuffix(basename(filename), ".yml") => yamldecode(file(filename))
+  }
 
-resource "googleworkspace_group" "groups" {
-  for_each = local.gsuite_groups
+  # team associations with repos on github
+  github_team_repos = {
+    for obj in flatten([
+      for repo, details in local.repos : try(flatten([
+        for team in details.teams : { repo : repo, team : team.name, permission : team.permission }
+      ]), [])
+    ]) : "${obj.repo}_${obj.team}" => obj
+  }
 
-  email       = "${each.key}@breu.io"
-  name        = each.value.name
-  description = each.value.description
-}
-
-resource "googleworkspace_group_member" "group_member" {
-  for_each = local.gsuite_group_members
-
-  # group = "${each.value.group}@breu.io"
-  group_id = googleworkspace_group.groups[each.value.group].id
-  email    = each.value.email
-  role     = each.value.role
+  # team assoications with github users
+  github_team_memberships = {
+    for obj in flatten([
+      for user, details in local.users : try(flatten([
+        for team in details.github.teams : { username : details.github.username, team : team.name, role : team.role }
+      ]), [])
+    ]) : "${obj.team}_${obj.username}" => obj
+  }
 }
 
 resource "github_repository" "repos" {

@@ -5,11 +5,11 @@ name:
   first_name: Auroob
   last_name: Toor
 
-gsuite_user: true
+googleworkspace_user: true
 
 
 # Google Workspace
-gsuite:
+googleworkspace:
   groups:
     - name: team
       role: member

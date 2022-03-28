@@ -104,6 +104,6 @@ $RECYCLE.BIN/
 
 # Project Sepcific
 .env
-gsuite.json # gsuite
+googleworkspace.json # googleworkspace
 
 # End of https://www.toptal.com/developers/gitignore/api/terraform,osx,windows,linux
