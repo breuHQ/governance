@@ -1,23 +1,75 @@
-# governance
+# Introduction
 
-Breu's IAM governance as code
+Breu's identity and access management, as code. The aim of the project is to
 
-New Mainterner must provide their **Personal Access Token** for GitHub in their own Local Environment
+- create user's across multiple SASS
+- manage access level across multiple SASS
 
-This can be done in the follwing way ->
+have a unified control of all resources and provide audit logs.
 
-- Set env variable by setting the token to .bashrc/.bash_profile
+Currently it support
 
-- example - `export GITHUB_TOKEN="${token_string}"`
+- Google Workspace
+- Github
 
-Documentation can be found here - >
+Work in progress
 
-[OAuth / Personal Access Token](https://registry.terraform.io/providers/integrations/github/latest/docs#oauth--personal-access-token)
+- Google Cloud
 
-# To Create a New User
+## Pre Requisites
 
-Create a <username>.yml inside users directory
+You have the following developer tools installed on your computer
 
-run commands ->
+- [terraform](https://terraform.io)
+- [gcloud](https://cloud.google.com/sdk/gcloud)
+- [jq](https://stedolan.github.io/jq/)
 
-- `terraform plan -out <plan_name>`
+## Getting Started
+
+Before getting started, you need to obtain the service account credentials from `breu-seed` project and place the file with name `gsuite.json` at the root of the directory.
+
+The project also assumes that you the admin on github. Get the `GITHUB_TOKEN` from github, and export it as environment varilable.
+
+Then run,
+
+```bash
+terraform init
+```
+
+You should be able to run the project.
+
+## Project Structure
+
+### Users
+
+Each user is represented as a file inside `users` folder. The structure of the `<user>.yaml` is as follows
+
+```yaml
+email: email@breu.io # email address
+recovery_email: # recovery email
+recovery_phone: # recovery phone
+name:
+  first_name: # first name
+  last_name: # last name
+
+googleworkspace_user: true # if this is a gsuite user. In some cases we might not want to add a user in google workspace
+
+# Google Workspace
+googleworkspace:
+  groups:
+    - name: team # name of the group
+      role: member # role of the member
+# Github
+github:
+  username: # github username
+  teams:
+    - name: team # name of the team on github
+      role: member # role
+```
+
+### Groups
+
+There are two types of groups currently.
+
+1. Google Workspaces
+2. Github

@@ -2,14 +2,14 @@
 locals {
   # repositories on github
   repos = {
-    for filename in fileset(path.module, "repos/*.yml") :
-    trimsuffix(basename(filename), ".yml") => yamldecode(file(filename))
+    for filename in fileset(path.module, "repos/*.yaml") :
+    trimsuffix(basename(filename), ".yaml") => yamldecode(file(filename))
   }
 
   # teams on github
   github_teams = {
-    for filename in fileset(path.module, "groups/github/*.yml") :
-    trimsuffix(basename(filename), ".yml") => yamldecode(file(filename))
+    for filename in fileset(path.module, "groups/github/*.yaml") :
+    trimsuffix(basename(filename), ".yaml") => yamldecode(file(filename))
   }
 
   # team associations with repos on github
@@ -61,6 +61,10 @@ resource "github_team_repository" "team_repos" {
   team_id    = github_team.teams[each.value.team].id
   repository = each.value.repo
   permission = each.value.permission
+
+  lifecycle {
+    ignore_changes = [etag]
+  }
 }
 
 resource "github_team_membership" "team_memberships" {

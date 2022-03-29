@@ -10,8 +10,8 @@ googleworkspace_user: true
 # Google Workspace
 googleworkspace:
   aliases:
-    - jay@breu.io
     - yousuf@breu.io
+    - jay@breu.io
 
   groups:
     - name: team

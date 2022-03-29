@@ -2,8 +2,8 @@
 locals {
   # users
   users = {
-    for filename in fileset(path.module, "users/*.yml") :
-    trimsuffix(basename(filename), ".yml") => yamldecode(file(filename))
+    for filename in fileset(path.module, "users/*.yaml") :
+    trimsuffix(basename(filename), ".yaml") => yamldecode(file(filename))
   }
 
   googleworkspace_users = {
@@ -12,8 +12,8 @@ locals {
 
   # groups on google workspace
   googleworkspace_groups = {
-    for filename in fileset(path.module, "groups/googleworkspace/*.yml") :
-    trimsuffix(basename(filename), ".yml") => yamldecode(file(filename))
+    for filename in fileset(path.module, "groups/google/*.yaml") :
+    trimsuffix(basename(filename), ".yaml") => yamldecode(file(filename))
   }
 
   # googleworkspace group memberships
