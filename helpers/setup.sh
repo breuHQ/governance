@@ -6,7 +6,7 @@ set -e
 set -u
 
 # Source input variables
-. ./setup_seed_prj.env
+. ./setup.env
 
 # Set Locals
 SA_ID="$SA_NAME@$SEED_PROJECT.iam.gserviceaccount.com"

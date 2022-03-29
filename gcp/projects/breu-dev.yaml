@@ -1,0 +1,10 @@
+name: breu-dev
+folder_id: 796767863566
+random_project_id: false
+domain: dev.breu.io
+labels:
+  state: active
+  cost-center: dev
+  environment: dev
+activate_apis:
+  - dns.googleapis.com

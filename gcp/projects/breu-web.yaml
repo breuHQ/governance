@@ -1,8 +1,13 @@
-name: Website
+name: breu-web
 folder_id: 392889559352
 random_project_id: false
 domain: web.breu.io
 billing_account: 000325-077F10-6E59AB
+labels:
+  state: active
+  cost-center: growth
+  project: growth
+  environment: live
 activate_apis:
   - appengine.googleapis.com
   - cloudbuild.googleapis.com
@@ -26,5 +31,4 @@ activate_apis:
   - pubsub.googleapis.com
   - runtimeconfig.googleapis.com
   - securetoken.googleapis.com
-  - sql-component.googleapis.com
   - testing.googleapis.com

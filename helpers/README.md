@@ -6,7 +6,7 @@ A helper script is included to create the Seed Project and its Seed Service Acco
 1. execute the helper script as;
 
    ```bash
-   ./common/helpers/setup_seed_prj.sh
+   ./helpers/setup.sh
    ```
 
 1. this will generate the SA credentials.json for you, which you can use for project factory.

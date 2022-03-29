@@ -1,22 +1,23 @@
-# module "project-factory" {
-
-#   name                = "breu-growth"
-#   random_project_id   = true
-#   org_id              = "460100486399"
-#   usage_bucket_name   = "breu-growth-usage-report-bucket"
-#   usage_bucket_prefix = "usage/breu-growth"
-#   billing_account     = "0175D5-703D28-5C6ADF"
-# }
-
 locals {
   gcp_folders = {
     for folder in yamldecode(file("gcp/folders.yaml")).folders :
-    folder.name => try({ parent : "folders/${folder.parent}" }, { parent : "organizations/${var.org_id}" })
+    folder.name => try(
+      { parent : "folders/${folder.parent}" },
+      { parent : "organizations/${var.org_id}" },
+    )
   }
 
   gcp_projects = {
     for filename in fileset(path.module, "gcp/projects/*.yaml") :
     trimsuffix(basename(filename), ".yaml") => yamldecode(file(filename))
+  }
+
+  gcp_project_buckets = {
+    for name, project in local.gcp_projects :
+    name => {
+      name : "${name}-tfstate",
+      location : project.default_region,
+    } if try(project.create_state_bucket, false) == true
   }
 }
 
@@ -41,4 +42,20 @@ module "projects" {
   domain                  = each.value.domain
   activate_apis           = each.value.activate_apis
   default_service_account = "delete"
+  labels                  = each.value.labels
+}
+
+resource "google_storage_bucket" "state" {
+  for_each = local.gcp_project_buckets
+  name     = each.value.name
+  location = each.value.location
+  project  = each.key
+
+  versioning {
+    enabled = true
+  }
+
+  depends_on = [
+    module.projects
+  ]
 }

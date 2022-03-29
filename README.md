@@ -42,7 +42,7 @@ You should be able to run the project.
 
 ### Users
 
-Each user is represented as a file inside `users` folder. The structure of the `<user>.yaml` is as follows
+Each user is represented as a file inside `users` folder. The structure of the `${user}.yaml` is as follows
 
 ```yaml
 email: email@breu.io # email address
@@ -71,5 +71,51 @@ github:
 
 There are two types of groups currently.
 
-1. Google Workspaces
-2. Github
+- Google Workspaces
+- Github
+
+#### Google Workspaces
+
+Like `users`, each file in `groups/google` represent one group. The structure of the `${group}.yaml` is as follow. The filename will represent `${name}@breu.io`.
+
+```yaml
+name: Name
+description: Description
+```
+
+#### Github
+
+Like `users` and `github`, each file in `groups/github` represent a team in github. The structure of `${team}.yaml` is as follows
+
+```yaml
+description: Description
+create_default_maintainer: false
+privacy: secret # or public
+```
+
+### Repositories
+
+We control the access of github via terraform aswell.
+
+```yaml
+name: infra
+description: IaC for Breu. Setsup Breu as a startup incubator.
+has_downloads: true
+has_issues: true
+has_wiki: false
+has_projects: false
+topics:
+  - infra
+  - internal
+  - breu
+
+teams:
+  - name: admins
+    permission: admin
+```
+
+### Google Cloud
+
+Each `folder` in GCP represents a cost center, e.g. `breu` is the main `breu` const center. Then under breu, we will have multiple cost centers as well, like `growth`, `hr`, `rnd` etc. Each project is then created under a cost center.
+
+There is a single `folders.yaml` right now, and each entry represent a single folder.

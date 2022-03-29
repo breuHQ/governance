@@ -1,0 +1,13 @@
+name: tracenaut-dev
+folder_id: 632663332249
+random_project_id: false
+domain: tracenaut.dev.breu.io
+create_state_bucket: true
+default_region: us-central1
+labels:
+  state: active
+  cost-center: rnd
+  project: tracenaut
+  environment: dev
+activate_apis:
+  - dns.googleapis.com
