@@ -59,3 +59,17 @@ resource "google_storage_bucket" "state" {
     module.projects
   ]
 }
+
+output "state_backets" {
+  value = {
+    for name, bucket in google_storage_bucket.state :
+    name => bucket.self_link
+  }
+}
+
+output "folders" {
+  value = {
+    for name, folder in google_folder.folders :
+    name => folder
+  }
+}

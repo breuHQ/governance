@@ -10,4 +10,8 @@ labels:
   project: tracenaut
   environment: dev
 activate_apis:
+  - artifactregistry.googleapis.com
+  - compute.googleapis.com
+  - container.googleapis.com
   - dns.googleapis.com
+  - servicenetworking.googleapis.com
