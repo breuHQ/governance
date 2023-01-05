@@ -60,16 +60,16 @@ resource "google_storage_bucket" "state" {
   ]
 }
 
-output "state_backets" {
+output "project_state_backets" {
   value = {
     for name, bucket in google_storage_bucket.state :
     name => bucket.self_link
   }
 }
 
-output "folders" {
+output "folder_ids" {
   value = {
     for name, folder in google_folder.folders :
-    name => folder
+    name => folder.folder_id
   }
 }

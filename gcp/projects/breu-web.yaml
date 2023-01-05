@@ -2,7 +2,6 @@ name: breu-web
 folder_id: 392889559352
 random_project_id: false
 domain: web.breu.io
-billing_account: 000325-077F10-6E59AB
 labels:
   state: active
   cost-center: growth
