@@ -1,9 +1,9 @@
-email: auroob@breu.io
-recovery_email: auroobtoor98@gmail.com 
-recovery_phone: "+923455190191"
+email: sajid@breu.io
+recovery_email:  
+recovery_phone: ""
 name:
-  first_name: Auroob
-  last_name: Toor
+  first_name: Sajid
+  last_name: Karim
 
 googleworkspace_user: true
 
@@ -15,7 +15,7 @@ googleworkspace:
       role: member
 # Github
 github:
-  username: auroobahmad
+  username: sajid-karim
   teams:
     - name: hd-digital
       role: member

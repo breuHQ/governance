@@ -1,0 +1,25 @@
+email: faizan@breu.io
+recovery_email:  
+recovery_phone: ""
+name:
+  first_name: Faizan
+  last_name: Hussain
+
+googleworkspace_user: true
+
+
+# Google Workspace
+googleworkspace:
+  groups:
+    - name: team
+      role: member
+# Github
+github:
+  username: Catisho
+  teams:
+    - name: growth
+      role: member
+    - name: admins
+      role: member
+    - name: ctrlplane
+      role: member    
