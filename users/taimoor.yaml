@@ -17,5 +17,7 @@ googleworkspace:
 github:
   username: taimoor-mirza
   teams:
-    - name: ctrlplane
+    - name: nozl
       role: member
+    - name: ctrlplane
+      role: member  
