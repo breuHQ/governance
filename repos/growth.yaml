@@ -1,0 +1,17 @@
+name: growth
+description: Breu's Growth
+has_downloads: false
+has_issues: false
+has_wiki: false
+has_projects: false
+topics:
+  - internal
+  - breu
+
+teams:
+  - name: admins
+    permission: admin
+
+  - name: growth
+    permission: maintain
+
