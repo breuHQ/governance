@@ -1,5 +1,5 @@
-name: nozl
-description: Rate limiter as a service
+name: svt-core
+description: Backend for P2 app
 has_downloads: false
 has_issues: false
 has_wiki: false
@@ -12,5 +12,5 @@ teams:
   - name: admins
     permission: admin
 
-  - name: nozl
+  - name: svt-core
     permission: maintain
