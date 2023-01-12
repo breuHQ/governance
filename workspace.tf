@@ -32,6 +32,7 @@ resource "googleworkspace_user" "users" {
   primary_email  = each.value.email
   recovery_email = each.value.recovery_email
   recovery_phone = each.value.recovery_phone
+  create         = false
 
   name {
     given_name  = each.value.name.first_name

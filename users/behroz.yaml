@@ -1,9 +1,9 @@
-email: ahmad@breu.io
-recovery_email: ahmadullah943@gmail.com
+email: sajid@breu.io
+recovery_email:  
 recovery_phone: ""
 name:
-  first_name: Ahmad
-  last_name: Hassan Ullah
+  first_name: Behroz 
+  last_name: Karim
 
 googleworkspace_user: true
 
@@ -15,7 +15,7 @@ googleworkspace:
       role: member
 # Github
 github:
-  username: ahmadhassaan11
+  username: BehrozKarim
   teams:
-    - name: growth
+    - name: xnaut
       role: member
