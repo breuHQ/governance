@@ -27,19 +27,26 @@ locals {
 }
 
 resource "googleworkspace_user" "users" {
-  for_each = local.googleworkspace_users
-
+  for_each       = local.googleworkspace_users
   primary_email  = each.value.email
   recovery_email = each.value.recovery_email
   recovery_phone = each.value.recovery_phone
-  create         = false
+  
 
   name {
     given_name  = each.value.name.first_name
     family_name = each.value.name.last_name
   }
-
+  
   aliases = try(each.value.googleworkspace.aliases, [])
+
+
+
+}
+output "duplicate_users" {
+  value = [for user in googleworkspace_user.users : 
+            user.primary_email if length([for user_inner in googleworkspace_user.users : 
+            user_inner.primary_email if user_inner.primary_email == user.primary_email]) > 1]
 }
 
 resource "googleworkspace_group" "groups" {

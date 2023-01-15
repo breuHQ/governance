@@ -1,26 +1,18 @@
 // work in progress
 
-// Using terraform we are assigning roles of users in gcp based on their role in google workspace
-resource "null_resource" "assign_roles" {
-  provisioner "local-exec" {
-    command = <<EOF
-    export ROLE=$(gcloud beta admin roles list | grep ${var.workspace_role} | awk '{print $1}')
-    gcloud projects add-iam-policy-binding ${var.project_id} --member user:${var.email} --role projects/${var.project_id}/roles/$ROLE
-    EOF
-  }
+/*In this script, the "google_iam_member" resource is used to get the role of the 
+user from Google Workspace. The member argument is used to specify the email address 
+of the user. The "google_iam_binding" resource is used to assign the role to the 
+user on GCP. The role argument is used to set the role that should be assigned to the 
+user and the members argument is used to set the email address of the user.*/
+
+
+resource "google_iam_member" "user" {
+  role = "roles/viewer"
+  member = "user:${var.user_email}"
 }
 
-variable "workspace_role" {
-  description = "The role of the user in Google Workspace"
-  type        = string
-}
-
-variable "email" {
-  description = "The email of the user"
-  type        = string
-}
-
-variable "project_id" {
-  description = "The GCP project id"
-  type        = string
+resource "google_iam_binding" "binding" {
+  role = "${google_iam_member.user.role}"
+  members = ["${google_iam_member.user.member}"]
 }
