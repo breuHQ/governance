@@ -3,7 +3,7 @@ recovery_email: saqibakhtar88@gmail.com
 recovery_phone: "+923322253093"
 name:
   first_name: Saqib
-  last_name: Akhtar
+  last_name: Akhter
 
 googleworkspace_user: true
 
@@ -14,8 +14,10 @@ googleworkspace:
     - name: team
       role: member
 # Github
-# github:
-#   username: auroobahmad
-#   teams:
-#     - name: slogr
-#       role: member
+github:
+  username: SaqibAkhter99
+  teams:
+    - name: xnaut
+      role: member
+    - name: admins
+      role: member  

@@ -1,7 +1,7 @@
-name: hd-backstage
+name: xnaut
 allow_squash_merge: false
 allow_rebase_merge: false
-description: Backstage for HD
+description: Digital discovery compliance for HD
 delete_branch_on_merge: true
 has_downloads: true
 has_issues: true
@@ -14,5 +14,5 @@ teams:
   - name: admins
     permission: admin
 
-  - name: hd-digital
+  - name: xnaut
     permission: maintain
