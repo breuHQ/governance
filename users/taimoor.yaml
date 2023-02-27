@@ -1,6 +1,6 @@
 email: taimoor@breu.io
 recovery_email:  
-recovery_phone: ""
+recovery_phone: "+923244253153"
 name:
   first_name: Taimoor
   last_name: Mirza
@@ -19,5 +19,6 @@ github:
   teams:
     - name: nozl
       role: member
+
     - name: ctrlplane
       role: member  

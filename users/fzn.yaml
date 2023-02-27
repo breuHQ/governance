@@ -1,4 +1,4 @@
-email: faizan@breu.io
+email: fzn@breu.io
 recovery_email: faiizanhussain@gmail.com 
 recovery_phone: ""
 name:
@@ -10,6 +10,8 @@ googleworkspace_user: true
 
 # Google Workspace
 googleworkspace:
+  aliases:
+    - faizan@breu.io
   groups:
     - name: team
       role: member
@@ -19,7 +21,9 @@ github:
   teams:
     - name: growth
       role: member
+
     - name: admins
       role: member
+
     - name: ctrlplane
       role: member    

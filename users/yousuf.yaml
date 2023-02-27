@@ -17,19 +17,7 @@ googleworkspace:
     - name: team
       role: owner
 
-    - name: gcp-billing-admins
-      role: owner
-
-    - name: x_hd
-      role: owner
-
     - name: fin
-      role: owner
-
-    - name: gcp-organization-admins
-      role: owner
-
-    - name: gcp-security-admins
       role: owner
 
     - name: jobs
@@ -39,6 +27,15 @@ googleworkspace:
       role: owner
 
     - name: sales
+      role: owner
+
+    - name: gcp-billing-admins
+      role: owner
+
+    - name: gcp-organization-admins
+      role: owner
+
+    - name: gcp-security-admins
       role: owner
 
 # Github

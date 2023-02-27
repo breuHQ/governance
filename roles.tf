@@ -7,12 +7,12 @@ user on GCP. The role argument is used to set the role that should be assigned t
 user and the members argument is used to set the email address of the user.*/
 
 
-resource "google_iam_member" "user" {
-  role = "roles/viewer"
-  member = "user:${var.user_email}"
-}
+# resource "google_iam_member" "user" {
+#   role = "roles/viewer"
+#   member = "user:${var.user_email}"
+# }
 
-resource "google_iam_binding" "binding" {
-  role = "${google_iam_member.user.role}"
-  members = ["${google_iam_member.user.member}"]
-}
+# resource "google_iam_binding" "binding" {
+#   role = "${google_iam_member.user.role}"
+#   members = ["${google_iam_member.user.member}"]
+# }

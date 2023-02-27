@@ -1,9 +1,9 @@
-email: behroz@breu.io
-recovery_email:  
+email: amna@breu.io
+recovery_email: amnatehreem@gmail.com
 recovery_phone: ""
 name:
-  first_name: Behroz 
-  last_name: Karim
+  first_name: Amna
+  last_name: Tehreem
 
 googleworkspace_user: true
 
@@ -15,7 +15,7 @@ googleworkspace:
       role: member
 # Github
 github:
-  username: BehrozKarim
+  username: amnabreu
   teams:
-    - name: xnaut
+    - name: growth
       role: member

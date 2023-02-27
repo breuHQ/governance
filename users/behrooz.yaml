@@ -1,9 +1,9 @@
-email: mahad@breu.io
+email: behrooz@breu.io
 recovery_email:  
 recovery_phone: ""
 name:
-  first_name: Mahad
-  last_name: Akhter
+  first_name: Behroz 
+  last_name: Karim
 
 googleworkspace_user: true
 
@@ -15,10 +15,7 @@ googleworkspace:
       role: member
 # Github
 github:
-  username: mahad-akhter
+  username: BehrozKarim
   teams:
-    - name: ctrlplane
+    - name: xnaut
       role: member
-
-    - name: nozl
-      role: member    

@@ -1,12 +1,11 @@
-name: growth
-description: Breu's product to solve cloud related problems
+name: ctrlplane
+description: ctrlplane.ai - Release Automation for speed and scale.
 has_downloads: false
 has_issues: false
 has_wiki: false
 has_projects: false
 topics:
-  - internal
-  - breu
+  - ctrlplane
 
 teams:
   - name: admins

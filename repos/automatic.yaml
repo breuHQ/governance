@@ -13,6 +13,3 @@ topics:
 teams:
   - name: admins
     permission: admin
-
-  - name: integry
-    permission: maintain

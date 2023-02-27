@@ -10,6 +10,3 @@ topics:
 teams:
   - name: admins
     permission: admin
-
-  - name: tracechimp
-    permission: maintain
