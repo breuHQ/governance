@@ -1,2 +1,3 @@
 name: gcp-security-admins 
 description: Security Admins Team for Breu.io
+public: false

@@ -20,10 +20,10 @@ github:
   username: Catisho
   teams:
     - name: growth
-      role: member
+      role: maintainer
 
     - name: admins
-      role: member
+      role: maintainer
 
     - name: ctrlplane
-      role: member    
+      role: maintainer

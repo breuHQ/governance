@@ -18,6 +18,7 @@ github:
   username: SaqibAkhter99
   teams:
     - name: xnaut
-      role: member
+      role: maintainer
+
     - name: admins
-      role: member  
+      role: maintainer

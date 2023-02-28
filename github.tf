@@ -41,10 +41,6 @@ resource "github_repository" "repos" {
   has_wiki      = each.value.has_wiki
   has_projects  = each.value.has_projects
   topics        = each.value.topics
-
-  lifecycle {
-    ignore_changes = [branches]
-  }
 }
 
 resource "github_team" "teams" {
@@ -53,6 +49,13 @@ resource "github_team" "teams" {
   name                      = each.key
   description               = each.value.description
   create_default_maintainer = each.value.create_default_maintainer
+
+  lifecycle {
+    ignore_changes = [
+      etag,
+      members_count,
+    ]
+  }
 }
 
 resource "github_team_repository" "team_repos" {

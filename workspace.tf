@@ -31,22 +31,21 @@ resource "googleworkspace_user" "users" {
   primary_email  = each.value.email
   recovery_email = each.value.recovery_email
   recovery_phone = each.value.recovery_phone
-  
+
 
   name {
     given_name  = each.value.name.first_name
     family_name = each.value.name.last_name
   }
-  
+
   aliases = try(each.value.googleworkspace.aliases, [])
 
-
-
-}
-output "duplicate_users" {
-  value = [for user in googleworkspace_user.users : 
-            user.primary_email if length([for user_inner in googleworkspace_user.users : 
-            user_inner.primary_email if user_inner.primary_email == user.primary_email]) > 1]
+  lifecycle {
+    ignore_changes = [
+      etag,
+      last_login_time,
+    ]
+  }
 }
 
 resource "googleworkspace_group" "groups" {
@@ -60,8 +59,20 @@ resource "googleworkspace_group" "groups" {
 resource "googleworkspace_group_member" "group_member" {
   for_each = local.googleworkspace_group_members
 
-  # group = "${each.value.group}@breu.io"
   group_id = googleworkspace_group.groups[each.value.group].id
   email    = each.value.email
   role     = each.value.role
+}
+
+resource "googleworkspace_group_settings" "group_settings" {
+  for_each = local.googleworkspace_groups
+
+  email                   = googleworkspace_group.groups[each.key].email
+  allow_external_members  = false
+  who_can_contact_owner   = "ALL_MEMBERS_CAN_CONTACT"
+  who_can_leave_group     = "NONE_CAN_LEAVE"
+  who_can_join            = "INVITED_CAN_JOIN"
+  who_can_view_membership = "ALL_MEMBERS_CAN_VIEW"
+  who_can_view_group      = "ALL_MEMBERS_CAN_VIEW"
+  who_can_post_message    = each.value.public ? "ANYONE_CAN_POST" : "ALL_MEMBERS_CAN_POST"
 }

@@ -8,12 +8,12 @@ terraform {
   required_providers {
     github = {
       source  = "integrations/github"
-      version = "~> 4.1"
+      version = "5.18.0"
     }
 
     googleworkspace = {
       source  = "hashicorp/googleworkspace"
-      version = "0.6.0"
+      version = "0.7.0"
     }
   }
 }

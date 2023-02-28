@@ -30,7 +30,7 @@ resource "google_folder" "folders" {
 
 module "projects" {
   source  = "terraform-google-modules/project-factory/google"
-  version = "~> 12.0.0"
+  version = "14.1.0"
 
   for_each                = local.gcp_projects
   project_id              = each.key

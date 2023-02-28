@@ -18,7 +18,7 @@ github:
   username: taimoor-mirza
   teams:
     - name: nozl
-      role: member
+      role: maintainer
 
     - name: ctrlplane
-      role: member  
+      role: member
