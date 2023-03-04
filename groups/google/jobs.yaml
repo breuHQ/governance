@@ -1,3 +1,5 @@
-name: Jobs
+name: Jobs & HR
 description: Jobs @ Breu
 public: true
+aliases:
+  - hr@breu.io

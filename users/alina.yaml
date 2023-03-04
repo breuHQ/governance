@@ -1,9 +1,9 @@
-email: hamza@breu.io
-recovery_email: ahmadullah943@gmail.com
-recovery_phone: ""
+email: alina@breu.io
+recovery_email: ""
+recovery_phone: "+923350490087"
 name:
-  first_name: Hamza
-  last_name: Saif
+  first_name: Alina
+  last_name: Farid
 
 googleworkspace_user: true
 
@@ -14,5 +14,5 @@ googleworkspace:
     - name: team
       role: member
 
-    - name: dev
+    - name: jobs
       role: member

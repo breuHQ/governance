@@ -1,3 +1,5 @@
 name: Finance
 description: Breu Finance
 public: true
+aliases:
+  - finance@breu.io

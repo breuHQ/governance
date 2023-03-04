@@ -1,4 +1,3 @@
-
 locals {
   # users
   users = {
@@ -7,7 +6,8 @@ locals {
   }
 
   googleworkspace_users = {
-    for user, details in local.users : user => details if try(details.googleworkspace_user)
+    for user, details in local.users :
+    user => details if try(details.googleworkspace_user)
   }
 
   # groups on google workspace
@@ -19,26 +19,30 @@ locals {
   # googleworkspace group memberships
   googleworkspace_group_members = {
     for obj in flatten([
-      for user, details in local.users : try(flatten([
-        for group in details.googleworkspace.groups : { user : user, email : details.email, group : group.name, role : upper(group.role) }
-      ]), [])
+      for user, details in local.users :
+      try( // Sometimes, flatten will fail if details.googleworkspace.groups is null therefore we need to try
+        flatten([
+          for group in details.googleworkspace.groups : { user : user, email : details.email, group : group.name, role : upper(group.role)
+        }]),
+        [],
+      )
     ]) : "${obj.group}_${obj.user}" => obj
   }
 }
 
 resource "googleworkspace_user" "users" {
-  for_each       = local.googleworkspace_users
+  for_each = local.googleworkspace_users
+
   primary_email  = each.value.email
   recovery_email = each.value.recovery_email
   recovery_phone = each.value.recovery_phone
-
-
   name {
     given_name  = each.value.name.first_name
     family_name = each.value.name.last_name
   }
 
-  aliases = try(each.value.googleworkspace.aliases, [])
+  aliases   = try(each.value.googleworkspace.aliases, [])
+  suspended = try(each.value.googleworkspace.suspended, false)
 
   lifecycle {
     ignore_changes = [
@@ -54,6 +58,7 @@ resource "googleworkspace_group" "groups" {
   email       = "${each.key}@breu.io"
   name        = each.value.name
   description = each.value.description
+  aliases     = try(each.value.aliases, [])
 }
 
 resource "googleworkspace_group_member" "group_member" {

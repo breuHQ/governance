@@ -7,11 +7,14 @@ name:
 
 googleworkspace_user: true
 
-
 # Google Workspace
 googleworkspace:
+  suspended: true
   groups:
     - name: team
+      role: member
+
+    - name: dev
       role: member
 # Github
 github:

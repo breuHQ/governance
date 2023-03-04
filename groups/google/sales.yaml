@@ -1,3 +1,5 @@
 name: Sales
 description: Sales Team for Breu.io
 public: true
+aliases:
+  - get@breu.io

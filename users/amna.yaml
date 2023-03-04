@@ -13,9 +13,15 @@ googleworkspace:
   groups:
     - name: team
       role: member
+
+    - name: dev
+      role: member
+
+    - name: ctrlplane
+      role: member
 # Github
 github:
   username: amnabreu
   teams:
     - name: ctrlplane
-      role: member
+      role: maintainer

@@ -20,6 +20,12 @@ googleworkspace:
     - name: fin
       role: owner
 
+    - name: dev
+      role: owner
+
+    - name: ctrlplane
+      role: owner
+
     - name: jobs
       role: owner
 
