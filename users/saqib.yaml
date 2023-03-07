@@ -19,9 +19,3 @@ googleworkspace:
 # Github
 github:
   username: SaqibAkhter99
-  teams:
-    - name: xnaut
-      role: maintainer
-
-    - name: admins
-      role: maintainer

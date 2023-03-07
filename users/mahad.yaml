@@ -25,3 +25,6 @@ github:
   teams:
     - name: nozl
       role: maintainer
+
+    - name: ctrlplane
+      role: maintainer

@@ -1,0 +1,28 @@
+email: anjum@breu.io
+recovery_email:  
+recovery_phone: "+923214167247"
+name:
+  first_name: Anjum
+  last_name: Mudassar
+
+googleworkspace_user: true
+
+
+# Google Workspace
+googleworkspace:
+  groups:
+    - name: team
+      role: member
+
+    - name: sales
+      role: member
+
+    - name: xnaut
+      role: member
+
+    - name: nozl
+      role: member
+
+    - name: ctrlplane
+      role: member
+# Github
