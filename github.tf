@@ -34,13 +34,16 @@ locals {
 resource "github_repository" "repos" {
   for_each = local.repos
 
-  name          = each.value.name
-  description   = each.value.description
-  has_downloads = each.value.has_downloads
-  has_issues    = each.value.has_issues
-  has_wiki      = each.value.has_wiki
-  has_projects  = each.value.has_projects
-  topics        = each.value.topics
+  name                        = each.value.name
+  description                 = each.value.description
+  has_downloads               = each.value.has_downloads
+  has_issues                  = each.value.has_issues
+  has_wiki                    = each.value.has_wiki
+  has_projects                = each.value.has_projects
+  topics                      = each.value.topics
+  allow_merge_commit          = false
+  squash_merge_commit_title   = "PR_TITLE"
+  squash_merge_commit_message = "PR_BODY"
 }
 
 resource "github_team" "teams" {

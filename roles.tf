@@ -16,3 +16,10 @@ user and the members argument is used to set the email address of the user.*/
 #   role = "${google_iam_member.user.role}"
 #   members = ["${google_iam_member.user.member}"]
 # }
+
+# resource "google_organization_iam_custom_role" "admins" {
+#   org_id      = "123456789"
+#   role_id     = "admins"
+#   title       = "Admins"
+#   permissions = []
+# }

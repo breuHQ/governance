@@ -13,6 +13,7 @@ A helper script is included to create the Seed Project and its Seed Service Acco
 
 ## In order to execute this script, you must have an account with the following list of permissions at minimum
 
+```bash
 resourcemanager.organizations.list
 resourcemanager.projects.list
 billing.accounts.list
@@ -29,3 +30,4 @@ admin.googleapis.com
 appengine.googleapis.com
 billing.accounts.getIamPolicy on a billing account.
 billing.accounts.setIamPolicy on a billing account.
+```

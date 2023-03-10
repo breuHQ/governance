@@ -1,0 +1,32 @@
+name: nozl-default
+folder_id: 203279685227
+random_project_id: false
+domain: nozl.breu.io
+labels:
+  state: active
+  cost-center: nozl
+  environment: live
+activate_apis:
+  - appengine.googleapis.com
+  - cloudbuild.googleapis.com
+  - cloudfunctions.googleapis.com
+  - cloudresourcemanager.googleapis.com
+  - compute.googleapis.com
+  - container.googleapis.com
+  - containerregistry.googleapis.com
+  - dns.googleapis.com
+  - fcm.googleapis.com
+  - firebase.googleapis.com
+  - firebasedynamiclinks.googleapis.com
+  - firebasehosting.googleapis.com
+  - firebaseremoteconfig.googleapis.com
+  - firebaserules.googleapis.com
+  - googlecloudmessaging.googleapis.com
+  - iam.googleapis.com
+  - iamcredentials.googleapis.com
+  - identitytoolkit.googleapis.com
+  - oslogin.googleapis.com
+  - pubsub.googleapis.com
+  - runtimeconfig.googleapis.com
+  - securetoken.googleapis.com
+  - testing.googleapis.com
