@@ -19,9 +19,3 @@ googleworkspace:
 
     - name: ctrlplane
       role: member
-# Github
-# github:
-#   username: amnabreu
-#   teams:
-#     - name: ctrlplane
-#       role: mantainer

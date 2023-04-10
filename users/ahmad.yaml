@@ -13,6 +13,9 @@ googleworkspace:
   groups:
     - name: team
       role: member
+
+    - name: dev
+      role: member
 # Github
 github:
   username: ahmadhassaan11

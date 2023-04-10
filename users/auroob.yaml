@@ -18,7 +18,7 @@ googleworkspace:
       role: member
 
     - name: xnaut
-      role: owner
+      role: member
 # Github
 github:
   username: auroobahmad
