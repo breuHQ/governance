@@ -1,0 +1,17 @@
+name: quantm-live
+folder_id: 853457413791
+random_project_id: false
+domain: quantm.ai
+labels:
+  state: active
+  cost-center: quantm
+  environment: live
+activate_apis:
+  - appengine.googleapis.com
+  - cloudbuild.googleapis.com
+  - compute.googleapis.com
+  - container.googleapis.com
+  - containerregistry.googleapis.com
+  - dns.googleapis.com
+  - iam.googleapis.com
+  - pubsub.googleapis.com

@@ -14,5 +14,3 @@ teams:
   - name: admins
     permission: admin
 
-  - name: xnaut
-    permission: maintain

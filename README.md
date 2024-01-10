@@ -26,7 +26,13 @@ You have the following developer tools installed on your computer
 
 ## Getting Started
 
+### GCP & Google Workspace
+
 Before getting started, you need to obtain the service account credentials from `breu-seed` project and place the file with name `gsuite.json` at the root of the directory.
+
+> Why `breu-seed` project? It has the oauth app which allows us to add/delete users from github.
+
+### Github Token
 
 The project also assumes that you the admin on github. Get the `GITHUB_TOKEN` from github, and export it as environment varilable.
 

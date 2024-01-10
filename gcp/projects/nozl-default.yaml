@@ -6,6 +6,7 @@ labels:
   state: active
   cost-center: nozl
   environment: live
+  firebase: enabled
 activate_apis:
   - appengine.googleapis.com
   - cloudbuild.googleapis.com

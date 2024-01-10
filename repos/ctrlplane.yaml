@@ -1,11 +1,11 @@
 name: ctrlplane
-description: ctrlplane.ai - Release Automation for speed and scale.
+description: quantm.ai - Release Automation for speed and scale.
 has_downloads: false
 has_issues: false
 has_wiki: false
 has_projects: false
 topics:
-  - ctrlplane
+  - quantm
 
 teams:
   - name: admins

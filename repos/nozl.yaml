@@ -10,6 +10,3 @@ topics:
 teams:
   - name: admins
     permission: admin
-
-  - name: nozl
-    permission: maintain

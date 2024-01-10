@@ -17,11 +17,7 @@ googleworkspace:
     - name: dev
       role: member
 
-    - name: xnaut
-      role: member
 # Github
 github:
   username: auroobahmad
-  teams:
-    - name: xnaut
-      role: member
+  teams: {}

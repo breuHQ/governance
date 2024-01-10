@@ -22,7 +22,11 @@ locals {
       for user, details in local.users :
       try( // Sometimes, flatten will fail if details.googleworkspace.groups is null therefore we need to try
         flatten([
-          for group in details.googleworkspace.groups : { user : user, email : details.email, group : group.name, role : upper(group.role)
+          for group in details.googleworkspace.groups : {
+            user : user,
+            email : details.email,
+            group : group.name,
+            role : upper(group.role)
         }]),
         [],
       )

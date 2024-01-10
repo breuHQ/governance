@@ -19,7 +19,4 @@ googleworkspace:
 # Github
 github:
   username: alyfinder
-  teams:
-    - name: svt-core
-      role: member
-
+  teams: {}

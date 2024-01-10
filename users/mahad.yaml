@@ -16,15 +16,10 @@ googleworkspace:
 
     - name: dev
       role: member
-
-    - name: nozl
-      role: owner
+      
 # Github
 github:
   username: mahad-akhter
   teams:
-    - name: nozl
-      role: maintainer
-
     - name: ctrlplane
       role: maintainer
