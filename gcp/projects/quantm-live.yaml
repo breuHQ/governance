@@ -1,7 +1,9 @@
 name: quantm-live
 folder_id: 853457413791
 random_project_id: false
-domain: quantm.ai
+domain: quantm.
+create_state_bucket: true
+default_region: us-central1
 labels:
   state: active
   cost-center: quantm
@@ -15,3 +17,5 @@ activate_apis:
   - dns.googleapis.com
   - iam.googleapis.com
   - pubsub.googleapis.com
+  - cloudkms.googleapis.com
+  - run.googlepais.com

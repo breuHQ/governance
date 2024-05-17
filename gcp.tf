@@ -7,6 +7,11 @@ locals {
     )
   }
 
+  gcp_folder_ids = {
+    for name, folder in local.gcp_folders :
+    name => folder.parent
+  }
+
   gcp_projects = {
     for filename in fileset(path.module, "gcp/projects/*.yaml") :
     trimsuffix(basename(filename), ".yaml") => yamldecode(file(filename))

@@ -56,7 +56,6 @@ resource "github_team" "teams" {
   lifecycle {
     ignore_changes = [
       etag,
-      members_count,
     ]
   }
 }
