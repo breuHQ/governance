@@ -77,6 +77,7 @@ resource "googleworkspace_group_settings" "group_settings" {
   for_each = local.googleworkspace_groups
 
   email                   = googleworkspace_group.groups[each.key].email
+  primary_language        = "en_US"
   allow_external_members  = false
   who_can_contact_owner   = "ALL_MEMBERS_CAN_CONTACT"
   who_can_leave_group     = "NONE_CAN_LEAVE"

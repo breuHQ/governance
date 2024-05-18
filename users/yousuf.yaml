@@ -23,7 +23,7 @@ googleworkspace:
     - name: dev
       role: owner
 
-    - name: ctrlplane
+    - name: quantm
       role: owner
 
     - name: jobs

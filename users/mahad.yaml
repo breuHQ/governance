@@ -16,10 +16,3 @@ googleworkspace:
 
     - name: dev
       role: member
-      
-# Github
-github:
-  username: mahad-akhter
-  teams:
-    - name: ctrlplane
-      role: maintainer

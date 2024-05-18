@@ -13,3 +13,6 @@ googleworkspace:
   groups:
     - name: team
       role: member
+
+    - name: quantm
+      role: member
