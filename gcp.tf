@@ -22,6 +22,7 @@ locals {
     name => {
       name : "${name}-tfstate",
       location : project.default_region,
+      labels : project.labels,
     } if try(project.create_state_bucket, false) == true
   }
 }
@@ -35,7 +36,7 @@ resource "google_folder" "folders" {
 
 module "projects" {
   source  = "terraform-google-modules/project-factory/google"
-  version = "14.1.0"
+  version = "15.0.0"
 
   for_each                = local.gcp_projects
   project_id              = each.key
@@ -54,6 +55,7 @@ resource "google_storage_bucket" "state" {
   for_each = local.gcp_project_buckets
   name     = each.value.name
   location = each.value.location
+  labels   = each.value.labels
   project  = each.key
 
   versioning {
