@@ -16,6 +16,9 @@ googleworkspace:
 
     - name: dev
       role: member
+
+    # - name: quantm
+    #   role: member
 # Github
 github:
   username: alyfinder

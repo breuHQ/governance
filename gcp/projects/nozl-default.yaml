@@ -1,11 +1,12 @@
 name: nozl-default
 folder_id: 203279685227
 random_project_id: false
-domain: nozl.breu.io
+domain: nozl.dev
 labels:
   state: active
   cost-center: nozl
   environment: live
+  status: deprecated
   firebase: enabled
 activate_apis:
   - appengine.googleapis.com

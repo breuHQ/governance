@@ -7,3 +7,8 @@ import {
   id = "quantm-live"
   to = module.projects["quantm-live"].module.project-factory.google_project.main
 }
+
+import {
+  id = "breu-ops"
+  to = module.projects["breu-ops"].module.project-factory.google_project.main
+}

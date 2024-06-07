@@ -52,12 +52,6 @@ resource "github_team" "teams" {
   name                      = each.key
   description               = each.value.description
   create_default_maintainer = each.value.create_default_maintainer
-
-  lifecycle {
-    ignore_changes = [
-      etag,
-    ]
-  }
 }
 
 resource "github_team_repository" "team_repos" {
@@ -66,10 +60,6 @@ resource "github_team_repository" "team_repos" {
   team_id    = github_team.teams[each.value.team].id
   repository = each.value.repo
   permission = each.value.permission
-
-  lifecycle {
-    ignore_changes = [etag]
-  }
 }
 
 resource "github_team_membership" "team_memberships" {

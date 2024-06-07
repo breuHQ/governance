@@ -47,13 +47,6 @@ resource "googleworkspace_user" "users" {
 
   aliases   = try(each.value.googleworkspace.aliases, [])
   suspended = try(each.value.googleworkspace.suspended, false)
-
-  lifecycle {
-    ignore_changes = [
-      etag,
-      last_login_time,
-    ]
-  }
 }
 
 resource "googleworkspace_group" "groups" {
