@@ -44,6 +44,7 @@ resource "github_repository" "repos" {
   allow_merge_commit          = false
   squash_merge_commit_title   = "PR_TITLE"
   squash_merge_commit_message = "PR_BODY"
+  web_commit_signoff_required = try(each.value.web_commit_signoff_required, false)
 }
 
 resource "github_team" "teams" {
